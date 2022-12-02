@@ -1,0 +1,11 @@
+@use 'sass:math';
+
+$font-family: 'Open Sans Hebrew', serif;
+
+$fw-regular: 400;
+$fw-bold: 700;
+
+@mixin font-size($size, $lh) {
+  font-size: $size;
+  line-height: $lh;
+}

@@ -1,0 +1,28 @@
+@use 'src/styles' as *;
+
+.container {
+  @include container;
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}
+
+.row {
+  display: flex;
+  gap: 10px
+}
+
+.others {
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px
+}
+
