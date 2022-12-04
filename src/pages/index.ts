@@ -9,3 +9,7 @@ export {InputPage}
 import CardPage from './CardPage/CardPage';
 
 export {CardPage}
+
+import DialogPage from './DialogPage/DialogPage'
+
+export {DialogPage}

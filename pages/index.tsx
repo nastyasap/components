@@ -1,4 +1,4 @@
-import {ButtonsPage, CardPage, InputPage} from '../src/pages';
+import {ButtonsPage, CardPage, DialogPage, InputPage} from '../src/pages';
 
 export default function Home() {
     return (
@@ -7,6 +7,7 @@ export default function Home() {
                 <ButtonsPage/>
                 <InputPage/>
                 <CardPage/>
+                <DialogPage/>
             </main>
         </div>
     )

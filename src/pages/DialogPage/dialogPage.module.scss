@@ -1,0 +1,26 @@
+@use 'src/styles' as *;
+
+.container {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 20px;
+  max-width: 500px;
+  background: $background-color;
+  box-shadow: 7px 7px 20px 10px rgba(46, 103, 140, 0.2), 0px 6px 60px rgba(0, 0, 0, 0.12);
+  border-radius: 20px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 40px;
+  width: 70%;
+}
+
+.footerButtons {
+  display: flex;
+  justify-content: space-between;
+}
