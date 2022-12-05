@@ -1,0 +1,66 @@
+@use 'src/styles' as *;
+
+.container {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 20px;
+  max-width: 500px;
+  background: $background-color;
+  box-shadow: 7px 7px 20px 10px rgba(46, 103, 140, 0.2), 0px 6px 60px rgba(0, 0, 0, 0.12);
+  border-radius: 20px;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  background: $color-light-grey;
+  padding: 20px;
+}
+
+.chipsGroup {
+  background: $color-light-grey;
+  padding: 10px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  border-radius: 20px;
+  border: 1px solid $color-burgundy;
+  width: fit-content;
+  padding: 4px 8px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  cursor: pointer;
+  background-color: $color-white;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  top: -8px;
+
+  &::before, &::after {
+    content: '';
+    background-color: $color-black;
+    position: absolute;
+    height: 1.5px;
+    width: 13px;
+    top: 10px;
+    right: 3px;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

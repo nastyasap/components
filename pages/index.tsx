@@ -1,12 +1,14 @@
-import {ButtonsPage, CardPage, DialogPage, InputPage} from '../src/pages';
+import {ButtonsPage, CardPage, ChipsPage, DialogPage, InputPage} from '../src/pages';
+import s from '../src/styles/Home.module.scss'
 
 export default function Home() {
     return (
         <div>
-            <main>
+            <main className={s.container}>
                 <ButtonsPage/>
                 <InputPage/>
                 <CardPage/>
+                <ChipsPage/>
                 <DialogPage/>
             </main>
         </div>

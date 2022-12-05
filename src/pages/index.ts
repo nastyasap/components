@@ -13,3 +13,7 @@ export {CardPage}
 import DialogPage from './DialogPage/DialogPage'
 
 export {DialogPage}
+
+import ChipsPage from './ChipsPage/ChipsPage';
+
+export {ChipsPage}
