@@ -1,22 +1,19 @@
-import {FC} from 'react';
+import {FC, ReactNode} from 'react';
 
 import {Button} from '../../components';
-import {ButtonsProps} from '../../shared/dialogButtons';
 
 import s from './dialogPage.module.scss'
 
 interface DialogPageProps {
-    buttons: Array<ButtonsProps>
+    children: ReactNode[]
 }
 
-const DialogPage: FC<DialogPageProps> = ({buttons}) => {
+const DialogPage: FC<DialogPageProps> = ({children}) => {
     return (
         <div className={s.container}>
             <span>What type of work would you like to do?</span>
             <div className={s.buttonContainer}>
-                {buttons.map(button => (
-                    <Button key={button.name} text={button.name} color={ button.color ? button.color : 'burgundy'} size={'small'}/>
-                ))}
+                {children}
             </div>
             <div className={s.footerButtons}>
                 <Button text={'Back'} color={'black'}/>
