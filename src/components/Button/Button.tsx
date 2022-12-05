@@ -3,6 +3,8 @@ import cn from 'classnames'
 
 import s from './button.module.scss'
 
+export type ButtonColor = 'green' | 'blue' | 'black' | 'burgundy' | 'darkBlue' | 'darkGrey'
+
 interface ButtonProps {
     text: string
     handler?: () => void
@@ -13,7 +15,7 @@ interface ButtonProps {
     iconPosition?: 'before text' | 'after text' | 'both'
     className?: string
     width?: string
-    color?: 'green' | 'blue' | 'black' | 'burgundy' | 'darkBlue' | 'darkGrey'
+    color?: ButtonColor
     size?: 'small' | 'medium' | 'large'
 }
 

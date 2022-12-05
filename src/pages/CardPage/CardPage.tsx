@@ -2,39 +2,37 @@ import {FC} from 'react';
 
 import {Button} from '../../components';
 
+import {CardsProps} from '../../shared/cards';
 import s from './cardPage.module.scss'
 
-const CardPage: FC = () => {
+interface CardPageProps {
+    elements: Array<CardsProps>
+}
+
+const CardPage: FC<CardPageProps> = ({elements}) => {
     return (
         <div className={s.container}>
-            <div className={s.element}>
-                <span>Email Authentication</span>
-                <Button text={'+'} size={'small'}/>
-            </div>
-            <div className={s.element}>
-                <span>Google Two Factor</span>
-                <Button text={'+'} size={'small'}/>
-            </div>
-            <div className={s.element}>
-                <span>Security key</span>
-                <Button text={'+'} size={'small'}/>
-            </div>
-            <div className={s.element}>
-                <span>Sign in with biometrics</span>
-                <>
-                    <input
-                        className={s.switchCheckbox}
-                        id={`react-switch-new`}
-                        type={'checkbox'}
-                    />
-                    <label
-                        className={s.switchLabel}
-                        htmlFor={`react-switch-new`}
-                    >
-                        <span className={s.switchButton} />
-                    </label>
-                </>
-            </div>
+            {elements.map((element, index) => (
+                <div key={element.name + index} className={s.element}>
+                    <span>{element.name}</span>
+                    {element.isOptional
+                        ? <>
+                            <input
+                                className={s.switchCheckbox}
+                                id={`react-switch-new`}
+                                type={'checkbox'}
+                            />
+                            <label
+                                className={s.switchLabel}
+                                htmlFor={`react-switch-new`}
+                            >
+                                <span className={s.switchButton}/>
+                            </label>
+                        </>
+                        : <Button text={'+'} size={'small'}/>
+                    }
+                </div>
+            ))}
         </div>
     )
 }
